@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "indira.yessimova.secondhomework";
+
+
+service ConversationService {
+  rpc handleMessage(InboundMessage) returns (OutboundMessage) {};
+}
+
+message InboundMessage {
+  string message = 1;
+}
+
+message OutboundMessage {
+  string message = 1;
+}
